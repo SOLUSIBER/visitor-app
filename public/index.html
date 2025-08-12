@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Pendaftaran Pengunjung</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aplikasi Pendaftaran Pengunjung</h1>
+            <p>Sistem Check-in dan Check-out berbasis Web</p>
+        </header>
+
+        <main>
+            <!-- Kolom Kiri: Form Check-in -->
+            <div class="card form-card">
+                <h2>Check-in Pengunjung Baru</h2>
+                <form id="checkin-form">
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap</label>
+                        <input type="text" id="name" name="name" placeholder="Masukkan nama pengunjung" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="purpose">Tujuan Kunjungan</label>
+                        <input type="text" id="purpose" name="purpose" placeholder="Contoh: Bertemu Bpk. Budi" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Check-in</button>
+                </form>
+            </div>
+
+            <!-- Kolom Kanan: Daftar Pengunjung -->
+            <div class="card list-card">
+                <h2>Pengunjung Saat Ini</h2>
+                <ul id="current-visitors-list">
+                    <!-- Data akan diisi oleh JavaScript -->
+                    <li class="loading">Memuat data...</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <div class="card">
+                <h2>Riwayat Kunjungan</h2>
+                <table id="history-table">
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Tujuan</th>
+                            <th>Waktu Check-in</th>
+                            <th>Waktu Check-out</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history-table-body">
+                        <!-- Data akan diisi oleh JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

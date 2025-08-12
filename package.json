@@ -1,0 +1,14 @@
+{
+  "name": "aplikasi-pengunjung-mariadb",
+  "version": "1.0.0",
+  "description": "Aplikasi check-in/check-out pengunjung dengan Node.js dan MariaDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^4.19.2",
+    "mysql2": "^3.9.7"
+  }
+}
